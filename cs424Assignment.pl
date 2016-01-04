@@ -25,3 +25,12 @@ parent(kathleen, paddy).
 
 parent(patrick, paul).
 parent(kathleen, paul).
+
+grandparent(X, Z) :- 
+    parent(Y, Z), 
+    parent(X, Y).
+
+cousin(X, Y) :- 
+    grandparent(Z, X), 
+    grandparent(Z, Y),
+    dif(X, Y).

@@ -1,4 +1,3 @@
-interleave([], [], []).
 interleave([X], [Y], [X, Y]).
 interleave([X | Xs], [Y | Ys], [X , Y | Zs]) :- 
 	interleave(Xs, Ys, Zs).
